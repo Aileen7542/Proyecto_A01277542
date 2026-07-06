@@ -15,14 +15,14 @@ class Personaje
         void setVidaMax(double);
         float getSalud() const; 
         void setSalud(double); 
-        float getAtaque(); 
+        float getAtaque() const; 
         void setAtaque(double); 
-        int getNivel(); 
+        int getNivel() const; 
         void setNivel(double);
         int porcentajeSalud(); 
         void imprimeBarra();
         int calculaAtaque(Personaje& objetivo); 
         void recibeAtaque(int ptosAtaque);
         void atacar(Personaje& objetivo);
-        void imprime();
+        void imprime() const;
 };
