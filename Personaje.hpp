@@ -21,8 +21,8 @@ class Personaje
         void setNivel(int);
         int porcentajeSalud(); 
         void imprimeBarra();
-        int calculaAtaque(Personaje& objetivo); 
+        int calculaAtaque(Personaje& otroPersonaje); 
         void recibeAtaque(int ptosAtaque);
-        void atacar(Personaje& objetivo);
+        void atacar(Personaje& otroPersonaje);
         void imprime() const;
 };
