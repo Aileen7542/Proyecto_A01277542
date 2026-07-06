@@ -1,0 +1,27 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+    class Personaje {
+        -float vidaMax
+        -float salud
+        -float ataque
+        -int nivel
+        +Personaje()
+        +Personaje(float, float, float, int)
+        +float getVidaMax()
+        +void setVidaMax(float)
+        +float getSalud()
+        +void setSalud(float)
+        +float getAtaque()
+        +void setAtaque(float)
+        +int getNivel()
+        +void setNivel(int)
+        +int porcentajeSalud()
+        +void imprimeBarra()
+        +int calculaAtaque(Personaje&)
+        +void recibeAtaque(int)
+        +void atacar(Personaje&)
+        +void imprime()
+    }
