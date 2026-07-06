@@ -12,13 +12,13 @@ class Personaje
         Personaje();
         Personaje(float, float, float, int); 
         float getVidaMax() const;
-        void setVidaMax(double);
+        void setVidaMax(float);
         float getSalud() const; 
-        void setSalud(double); 
+        void setSalud(float); 
         float getAtaque() const; 
-        void setAtaque(double); 
+        void setAtaque(float); 
         int getNivel() const; 
-        void setNivel(double);
+        void setNivel(int);
         int porcentajeSalud(); 
         void imprimeBarra();
         int calculaAtaque(Personaje& objetivo); 
