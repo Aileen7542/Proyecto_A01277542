@@ -10,7 +10,7 @@ class Personaje
 
     public: 
         Personaje();
-        Personaje(double); 
+        Personaje(float, float, float, int); 
         double getVidaMax() const;
         void setVidaMax(double);
         double getSalud() const; 
