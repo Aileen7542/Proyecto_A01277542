@@ -11,13 +11,13 @@ class Personaje
     public: 
         Personaje();
         Personaje(float, float, float, int); 
-        double getVidaMax() const;
+        float getVidaMax() const;
         void setVidaMax(double);
-        double getSalud() const; 
+        float getSalud() const; 
         void setSalud(double); 
-        double getAtaque(); 
+        float getAtaque(); 
         void setAtaque(double); 
-        double getNivel(); 
+        int getNivel(); 
         void setNivel(double);
         int porcentajeSalud(); 
         void imprimeBarra();
