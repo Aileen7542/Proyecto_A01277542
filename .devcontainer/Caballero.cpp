@@ -1,10 +1,10 @@
 #include "Caballero.hpp"
 #include "iostream" 
 
-Caballero::Caballero(): Personaje(200.0, 200.0, 0, 00.0), agilidad(50.0){
+Caballero::Caballero(): Personaje(200.0, 200.0, 0, 00.0), agilidad(50.0), escudo{50}{
 }
 
-Caballero::Caballero(float vMax, float vSalud, float atq, int nvl, float agl): Personaje(vMax, vSalud, atq, nvl), agilidad{agl}{
+Caballero::Caballero(float vMax, float vSalud, float atq, int nvl, float agl, int esc): Personaje(vMax, vSalud, atq, nvl), agilidad{agl}, escudo{esc}{
 }
 
 float Caballero::getAgilidad()const{
@@ -13,6 +13,14 @@ float Caballero::getAgilidad()const{
 
 void Caballero::setAgilidad(float agl){
     agilidad = agl; 
+}
+
+int Caballero::getEscudo()const{
+    return escudo; 
+}
+
+void Caballero::setEscudo(int esc){
+    escudo = esc; 
 }
 
 int Caballero::calculaAtaque(Personaje& otroPersonaje){
@@ -27,11 +35,15 @@ int Caballero::calculaAtaque(Personaje& otroPersonaje){
 void Caballero::recibeAtaque(int ptsAtaque){
     Personaje::recibeAtaque(ptsAtaque); 
     
-    int reduce = agilidad * (getNivel() * 5 / 100); 
+    int reduce = escudo * (getNivel() * 5 / 100); 
     ptsAtaque -= reduce; 
 
     if (ptsAtaque < 0){
         ptsAtaque = 0; 
+    }
+
+    if (escudo > 0){
+        escudo -= 5; 
     }
 }
 
