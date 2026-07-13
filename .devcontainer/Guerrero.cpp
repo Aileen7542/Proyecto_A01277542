@@ -1,7 +1,7 @@
 #include "Guerrero.hpp"
 #include "iostream" 
 
-Guerrero::Guerrero(): Personaje(200.0, 200.0, 0, 00.0), fuerza(0){
+Guerrero::Guerrero(): Personaje(200.0, 200.0, 0, 00.0), fuerza(100){
 }
 
 Guerrero::Guerrero(float vMax, float vSalud, float atq, int nvl, int fza): Personaje(vMax, vSalud, atq, nvl), fuerza{fza}{
