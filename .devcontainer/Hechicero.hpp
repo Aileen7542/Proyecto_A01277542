@@ -9,9 +9,9 @@ class Hechicero: public Personaje {
     public: 
         Hechicero(); 
         Hechicero(float, float, float, int, float); 
-        float getMagia(); 
+        float getMagia() const; 
         void setMagia(float); 
-        int calculaAtaque(Hechicero& otroHechicero); 
+        int calculaAtaque(Personaje& otroPersonaje); 
         void recibeAtaque(int ptosAtaque);
         void imprime() const;
 }; 
