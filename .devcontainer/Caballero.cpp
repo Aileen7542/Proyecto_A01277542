@@ -27,15 +27,13 @@ int Caballero::calculaAtaque(Personaje& otroPersonaje){
     int daño = Personaje::calculaAtaque(otroPersonaje);
 
     if (getNivel() >= otroPersonaje.getNivel()){
-        daño += agilidad * (getNivel() * 5 / 100);
+        daño += agilidad * (getNivel() * 5 / 100.0);
     }
     return daño;
 }
 
 void Caballero::recibeAtaque(int ptsAtaque){
-    Personaje::recibeAtaque(ptsAtaque); 
-    
-    int reduce = escudo * (getNivel() * 5 / 100); 
+    int reduce = escudo * (getNivel() * 5 / 100.0); 
     ptsAtaque -= reduce; 
 
     if (ptsAtaque < 0){
@@ -45,6 +43,7 @@ void Caballero::recibeAtaque(int ptsAtaque){
     if (escudo > 0){
         escudo -= 5; 
     }
+    Personaje::recibeAtaque(ptsAtaque); 
 }
 
 void Caballero::imprime()const{
