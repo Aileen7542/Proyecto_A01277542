@@ -1,7 +1,7 @@
 #include "Caballero.hpp"
 #include "iostream" 
 
-Caballero::Caballero(): Personaje(200.0, 200.0, 0, 00.0), agilidad(00.0){
+Caballero::Caballero(): Personaje(200.0, 200.0, 0, 00.0), agilidad(50.0){
 }
 
 Caballero::Caballero(float vMax, float vSalud, float atq, int nvl, float agl): Personaje(vMax, vSalud, atq, nvl), agilidad{agl}{
