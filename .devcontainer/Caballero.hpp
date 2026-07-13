@@ -9,7 +9,7 @@ class Caballero: public Personaje {
     public: 
         Caballero(); 
         Caballero(float, float, float, int, float); 
-        float getAgilidad(); 
+        float getAgilidad() const; 
         void setAgilidad(float); 
         int calculaAtaque(Caballero& otroCaballero); 
         void recibeAtaque(int ptosAtaque);
