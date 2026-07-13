@@ -19,7 +19,7 @@ int Hechicero::calculaAtaque(Personaje& otroPersonaje){
     int daño = Personaje::calculaAtaque(otroPersonaje);
 
     if (getNivel() >= otroPersonaje.getNivel()){
-        daño += magia * (getNivel() * 5 / 100);
+        daño += magia * (getNivel() * 5 / 100.0);
     }
 
     if (getNivel() >= 5){
@@ -33,22 +33,21 @@ int Hechicero::calculaAtaque(Personaje& otroPersonaje){
 }
 
 void Hechicero::recibeAtaque(int ptsAtaque){
-    Personaje::recibeAtaque(ptsAtaque); 
-    
-    int reduce = magia * (getNivel() * 5 / 100); 
+    int reduce = magia * (getNivel() * 5 / 100.0); 
     ptsAtaque -= reduce; 
 
     if (getNivel() >= 5){
         int hechizo = rand() % 100; 
+
         if (hechizo < 40){
             std::cout << "Hechizo de proteccion"; 
             ptsAtaque /= 2; 
         }
     }
-
     if (ptsAtaque < 0){
         ptsAtaque = 0; 
     }
+    Personaje::recibeAtaque(ptsAtaque);
 }
 
 void Hechicero::imprime()const{

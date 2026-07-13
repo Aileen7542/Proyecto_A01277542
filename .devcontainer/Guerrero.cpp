@@ -19,20 +19,19 @@ int Guerrero::calculaAtaque(Personaje& otroPersonaje){
     int daño = Personaje::calculaAtaque(otroPersonaje);
 
     if (getNivel() >= otroPersonaje.getNivel()){
-        daño += fuerza * (getNivel() * 5 / 100);
+        daño += fuerza * (getNivel() * 5 / 100.0);
     }
     return daño;
 }
 
 void Guerrero::recibeAtaque(int ptsAtaque){
-    Personaje::recibeAtaque(ptsAtaque); 
-    
-    int reduce = fuerza * (getNivel() * 5 / 100); 
+    int reduce = fuerza * (getNivel() * 5 / 100.0); 
     ptsAtaque -= reduce; 
 
     if (ptsAtaque < 0){
         ptsAtaque = 0; 
     }
+     Personaje::recibeAtaque(ptsAtaque);
 }
 
 void Guerrero::imprime()const{
