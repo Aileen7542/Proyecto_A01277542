@@ -11,7 +11,7 @@ class Caballero: public Personaje {
         Caballero(float, float, float, int, float); 
         float getAgilidad() const; 
         void setAgilidad(float); 
-        int calculaAtaque(Caballero& otroCaballero); 
+        int calculaAtaque(Personaje& otroPersonaje); 
         void recibeAtaque(int ptosAtaque);
         void imprime() const;
 }; 
