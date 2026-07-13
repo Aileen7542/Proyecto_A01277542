@@ -9,9 +9,9 @@ class Guerrero: public Personaje {
     public: 
         Guerrero(); 
         Guerrero(float, float, float, int, int); 
-        int getFuerza(); 
+        int getFuerza() const; 
         void setFuerza(int); 
-        int calculaAtaque(Guerrero& otroGuerrero); 
+        int calculaAtaque(Personaje& otroPersonaje); 
         void recibeAtaque(int ptosAtaque);
         void imprime() const;
 }; 
