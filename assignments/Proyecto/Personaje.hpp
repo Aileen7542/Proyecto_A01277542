@@ -1,1 +1,28 @@
-// Crear el archivo header de la clase Personaje, no olvides las guardas o el pragma.
+#pragma once 
+
+class Personaje
+{
+    private: 
+        float vidaMax; 
+        float salud; 
+        float ataque; 
+        int nivel; 
+
+    public: 
+        Personaje();
+        Personaje(float, float, float, int); 
+        float getVidaMax() const;
+        void setVidaMax(float);
+        float getSalud() const; 
+        void setSalud(float); 
+        float getAtaque() const; 
+        void setAtaque(float); 
+        int getNivel() const; 
+        void setNivel(int);
+        int porcentajeSalud(); 
+        void imprimeBarra();
+        int calculaAtaque(Personaje& otroPersonaje); 
+        void recibeAtaque(int ptosAtaque);
+        void atacar(Personaje& otroPersonaje);
+        void imprime() const;
+};
