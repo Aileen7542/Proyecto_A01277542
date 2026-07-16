@@ -1,1 +1,1 @@
-Folder para colocar imagenes del repositorio
+Folder para almacenar los archivos binarios del proyecto
