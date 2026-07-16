@@ -1,4 +1,4 @@
-# UML
+# Diagrama UML
 
 ```mermaid
 classDiagram
@@ -15,4 +15,33 @@ classDiagram
         + atacar(otroPersonaje : Personaje) void
         + imprime() void
     }
+
+    class Caballero {
+        - agilidad : float
+        - escudo : int
+
+        + calculaAtaque(otroPersonaje : Personaje) int
+        + recibeAtaque(ptosAtaque : int) void
+        + imprime() void
+    }
+
+    class Guerrero {
+        - fuerza : int
+
+        + calculaAtaque(otroPersonaje : Personaje) int
+        + recibeAtaque(ptosAtaque : int) void
+        + imprime() void
+    }
+
+    class Hechicero {
+        - magia : float
+
+        + calculaAtaque(otroPersonaje : Personaje) int
+        + recibeAtaque(ptosAtaque : int) void
+        + imprime() void
+    }
+
+    Personaje <|-- Caballero
+    Personaje <|-- Guerrero
+    Personaje <|-- Hechicero
 ```
