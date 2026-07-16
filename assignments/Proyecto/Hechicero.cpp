@@ -50,7 +50,7 @@ void Hechicero::recibeAtaque(int ptsAtaque){
     Personaje::recibeAtaque(ptsAtaque);
 }
 
-void Hechicero::imprime()const{
+void Hechicero::imprime(){
     Personaje::imprime(); 
     std::cout << "Magia: " << magia << std::endl; 
 }

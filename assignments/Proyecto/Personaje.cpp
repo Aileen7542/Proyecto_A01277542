@@ -89,11 +89,13 @@ void Personaje::atacar(Personaje& otroPersonaje){
     otroPersonaje.recibeAtaque(puntosataque); 
 }
 
-void Personaje::imprime()const{
+void Personaje::imprime(){
     std::cout << "Vida Maxima: " << vidaMax << std::endl; 
     std::cout << "Salud: " << salud << std::endl;
     std::cout << "Nivel: " << nivel << std::endl; 
     std::cout << "Ataque: " << ataque << std::endl; 
-    std::cout << "Barra de vida: " << imprimeBarra << std::endl;
+    std::cout << "Barra de vida: ";
+    imprimeBarra();
+    std::cout << std::endl;
 }
 

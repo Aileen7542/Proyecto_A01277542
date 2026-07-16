@@ -13,5 +13,5 @@ class Guerrero: public Personaje {
         void setFuerza(int); 
         int calculaAtaque(Personaje& otroPersonaje); 
         void recibeAtaque(int ptosAtaque);
-        void imprime() const;
+        void imprime();
 }; 

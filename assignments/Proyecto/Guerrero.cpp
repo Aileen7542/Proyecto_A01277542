@@ -34,7 +34,7 @@ void Guerrero::recibeAtaque(int ptsAtaque){
      Personaje::recibeAtaque(ptsAtaque);
 }
 
-void Guerrero::imprime()const{
+void Guerrero::imprime(){
     Personaje::imprime(); 
     std::cout << "Fuerza: " << fuerza << std::endl; 
 }

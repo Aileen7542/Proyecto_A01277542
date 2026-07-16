@@ -46,7 +46,7 @@ void Caballero::recibeAtaque(int ptsAtaque){
     Personaje::recibeAtaque(ptsAtaque); 
 }
 
-void Caballero::imprime()const{
+void Caballero::imprime(){
     Personaje::imprime(); 
     std::cout << "Agilidad: " << agilidad << std::endl; 
 }

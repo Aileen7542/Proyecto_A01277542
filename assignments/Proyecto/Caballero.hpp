@@ -16,5 +16,5 @@ class Caballero: public Personaje {
         void setEscudo(int); 
         int calculaAtaque(Personaje& otroPersonaje); 
         void recibeAtaque(int ptosAtaque);
-        void imprime() const;
+        void imprime();
 }; 

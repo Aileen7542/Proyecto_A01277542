@@ -24,5 +24,5 @@ class Personaje
         int calculaAtaque(Personaje& otroPersonaje); 
         void recibeAtaque(int ptosAtaque);
         void atacar(Personaje& otroPersonaje);
-        void imprime() const;
+        void imprime();
 };
