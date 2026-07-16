@@ -1,9 +1,18 @@
-# Ejercicio - Hello World
+# UML
 
-Este proyecto tiene la estructura básica para cualquier proyecto C++. 
+```mermaid
+classDiagram
+    class Personaje {
+        - vidaMax : float
+        - salud : float
+        - ataque : float
+        - nivel : int
 
-La carpeta contiene el código fuente y el archivo de construcción ```make```.
-
-La carpeta `build` contiene el codigo binario generado por el archivo de construcción ```make```.
-
-Consulta el archivo assignments/README.md para instrucciones sobre la compilación y ejecución del proyecto.
+        + porcentajeSalud() int
+        + imprimeBarra() void
+        + calculaAtaque(otroPersonaje : Personaje) int
+        + recibeAtaque(ptosAtaque : int) void
+        + atacar(otroPersonaje : Personaje) void
+        + imprime() void
+    }
+```

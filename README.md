@@ -21,5 +21,3 @@ Regrese a la **carpeta fuente inical, como está cuando cargas el codespace**, u
 Ej.- cd ../../
 
 ```
-
-
