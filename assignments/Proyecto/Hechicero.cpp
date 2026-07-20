@@ -32,6 +32,19 @@ int Hechicero::calculaAtaque(Personaje& otroPersonaje){
     return daño;
 }
 
+void Hechicero::calculaRevive(){
+    if(getSalud() <= 0){
+        if(magia >= 70){
+            std::cout << "Hechicero revivio por magia" << std::endl;
+            setSalud(70); 
+            magia -= 70; 
+        }
+        else{
+            std::cout << "El personaje murio" << std::endl; 
+        }
+    }
+}
+
 void Hechicero::recibeAtaque(int ptsAtaque){
     int reduce = magia * (getNivel() * 5 / 100.0); 
     ptsAtaque -= reduce; 
@@ -48,6 +61,7 @@ void Hechicero::recibeAtaque(int ptsAtaque){
         ptsAtaque = 0; 
     }
     Personaje::recibeAtaque(ptsAtaque);
+    calculaRevive(); 
 }
 
 void Hechicero::imprime(){
