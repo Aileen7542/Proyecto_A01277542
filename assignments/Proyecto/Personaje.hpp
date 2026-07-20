@@ -24,6 +24,7 @@ class Personaje
         virtual int calculaAtaque(Personaje& otroPersonaje);
         void atacar(Personaje& otroPersonaje); 
         virtual void recibeAtaque(int ptosAtaque);
+        virtual void calculaRevive() = 0; 
         virtual void imprime();
         virtual ~Personaje() = default;
 };
