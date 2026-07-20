@@ -11,7 +11,7 @@ class Guerrero: public Personaje {
         Guerrero(float, float, float, int, int); 
         int getFuerza() const; 
         void setFuerza(int); 
-        int calculaAtaque(Personaje& otroPersonaje); 
+        int calculaAtaque(Personaje& otroPersonaje) override; 
         void recibeAtaque(int ptosAtaque) override;
         void imprime() override;
 }; 
