@@ -24,6 +24,19 @@ int Guerrero::calculaAtaque(Personaje& otroPersonaje){
     return daño;
 }
 
+void Guerrero::calculaRevive(){
+    if(getSalud() <= 0){
+        if(fuerza >= 50){
+            std::cout << "Guerrero revivio" << std::endl;
+            setSalud(50); 
+            fuerza -= 50; 
+        }
+        else{
+            std::cout << "El personaje murio" << std::endl; 
+        }
+    }
+}
+
 void Guerrero::recibeAtaque(int ptsAtaque){
     int reduce = fuerza * (getNivel() * 5 / 100.0); 
     ptsAtaque -= reduce; 
@@ -32,6 +45,7 @@ void Guerrero::recibeAtaque(int ptsAtaque){
         ptsAtaque = 0; 
     }
      Personaje::recibeAtaque(ptsAtaque);
+     calculaRevive();
 }
 
 void Guerrero::imprime(){

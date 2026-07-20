@@ -35,7 +35,7 @@ int Hechicero::calculaAtaque(Personaje& otroPersonaje){
 void Hechicero::calculaRevive(){
     if(getSalud() <= 0){
         if(magia >= 70){
-            std::cout << "Hechicero revivio por magia" << std::endl;
+            std::cout << "Hechicero revivio" << std::endl;
             setSalud(70); 
             magia -= 70; 
         }

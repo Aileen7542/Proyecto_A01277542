@@ -32,6 +32,19 @@ int Caballero::calculaAtaque(Personaje& otroPersonaje){
     return daño;
 }
 
+void Caballero::calculaRevive(){
+    if(getSalud() <= 0){
+        if(agilidad >= 50){
+            std::cout << "Caballero revivio" << std::endl;
+            setSalud(50); 
+            agilidad -= 50; 
+        }
+        else{
+            std::cout << "El personaje murio" << std::endl; 
+        }
+    }
+}
+
 void Caballero::recibeAtaque(int ptsAtaque){
     int reduce = escudo * (getNivel() * 5 / 100.0); 
     ptsAtaque -= reduce; 
@@ -44,6 +57,7 @@ void Caballero::recibeAtaque(int ptsAtaque){
         escudo -= 5; 
     }
     Personaje::recibeAtaque(ptsAtaque); 
+    calculaRevive();
 }
 
 void Caballero::imprime(){
