@@ -12,6 +12,7 @@ class Hechicero: public Personaje {
         float getMagia() const; 
         void setMagia(float); 
         int calculaAtaque(Personaje& otroPersonaje) override; 
+        void calculaRevive() override; 
         void recibeAtaque(int ptosAtaque) override;
         void imprime() override;
 }; 
