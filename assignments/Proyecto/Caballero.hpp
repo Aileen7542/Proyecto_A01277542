@@ -15,6 +15,6 @@ class Caballero: public Personaje {
         int getEscudo() const; 
         void setEscudo(int); 
         int calculaAtaque(Personaje& otroPersonaje); 
-        void recibeAtaque(int ptosAtaque);
-        void imprime();
+        void recibeAtaque(int ptosAtaque) override;
+        void imprime() override;
 }; 
