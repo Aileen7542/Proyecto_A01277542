@@ -21,9 +21,9 @@ class Personaje
         void setNivel(int);
         int porcentajeSalud(); 
         void imprimeBarra();
-        int calculaAtaque(Personaje& otroPersonaje);
+        virtual int calculaAtaque(Personaje& otroPersonaje);
         void atacar(Personaje& otroPersonaje); 
         virtual void recibeAtaque(int ptosAtaque);
         virtual void imprime();
-        virtual ~Personaje()= default;
+        virtual ~Personaje() = default;
 };
