@@ -99,3 +99,7 @@ void Personaje::imprime(){
     std::cout << std::endl;
 }
 
+std::ostream& operator <<(std::ostream& os, Personaje& personaje){
+    personaje.imprime();
+    return os;
+}

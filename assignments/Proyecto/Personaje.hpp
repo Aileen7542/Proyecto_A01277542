@@ -1,4 +1,5 @@
 #pragma once 
+#include "iostream"
 
 class Personaje
 {
@@ -27,4 +28,5 @@ class Personaje
         virtual void calculaRevive() = 0; 
         virtual void imprime();
         virtual ~Personaje() = default;
+        friend std::ostream& operator <<(std::ostream& os, Personaje& personaje);
 };
