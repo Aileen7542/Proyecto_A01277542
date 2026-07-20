@@ -6,7 +6,7 @@
 #include "Hechicero.hpp"
 
 int main() {
-    std::vector<Personaje*> personaje;
+    std::vector < Personaje* > personaje;
     personaje.push_back(new Guerrero());
     personaje.push_back(new Caballero());
     personaje.push_back(new Hechicero());
@@ -16,7 +16,7 @@ int main() {
     }
 // peleaa
     for (int i = 1; i < personaje.size(); i++) {
-        personaje[0]->atacar(*personaje[i]);
+        personaje[0] -> atacar(*personaje[i]);
         std::cout << *personaje[i] << std::endl;
     }
     return 0;
