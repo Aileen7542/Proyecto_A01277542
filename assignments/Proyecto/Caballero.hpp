@@ -14,7 +14,7 @@ class Caballero: public Personaje {
         void setAgilidad(float); 
         int getEscudo() const; 
         void setEscudo(int); 
-        int calculaAtaque(Personaje& otroPersonaje); 
+        int calculaAtaque(Personaje& otroPersonaje) override; 
         void recibeAtaque(int ptosAtaque) override;
         void imprime() override;
 }; 
